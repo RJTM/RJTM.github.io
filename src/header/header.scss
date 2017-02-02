@@ -1,0 +1,80 @@
+@import '../styles/theme.scss';
+@import '../styles/mixins.scss';
+
+.header {
+    background: linear-gradient(rgba($primary, 0.7), rgba(lighten(#1b64af, 30), 0.7));
+    height: 100vh;
+    margin:0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+    .header-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .light {
+        font-weight: 300;
+    }
+
+    h1 {
+        
+        margin: 0;
+        text-transform: uppercase;
+        font-family: "Oswald";
+        font-size: 5vw;
+        text-shadow: 4px 4px 0px rgba(darken($primary, 50), 0.2);
+        padding-left: 15px;
+
+    }
+
+    h2 {
+        font-family: "Oswald";
+        text-transform: uppercase;
+
+        .light {
+            font-size: 15px;
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        font-family: "Oswald";
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+
+            }
+        }
+        
+        h2 {
+            flex: 1;
+            margin: 0;
+            margin-left: 20px;
+        }
+    }
+
+    .sticky {
+
+        transition: 0.5s ease all;
+
+        &.sticked {
+            color: #333;
+            background-color: white;
+        }
+    }
+
+}
+
+.fill {
+    height: 300vh;
+}
