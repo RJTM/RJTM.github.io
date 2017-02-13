@@ -15,3 +15,12 @@ $primary: #1b64af;
 .section-white {
     background-color: rgba(white, 0.5);
 }
+
+.section-black {
+    background-color: rgba(#333, 0.9);
+    color: white;
+}
+
+.section-blue {
+    background-color: rgba(lighten(#1b64af, 30), 0.7);
+}

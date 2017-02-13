@@ -1,0 +1,42 @@
+[
+    {
+        "title": "ReactJS",
+        "percent": 90
+    },
+    {
+        "title": "Redux",
+        "percent": 60
+    },
+    {
+        "title": "ES6",
+        "percent": 75
+    },
+    {
+        "title": "AngularJS",
+        "percent": 95
+    },
+    {
+        "title": "Git",
+        "percent": 80
+    },
+    {
+        "title": "NodeJS",
+        "percent": 70
+    },
+    {
+        "title": "Responsive",
+        "percent": 85
+    },
+    {
+        "title": "Ionic Framework",
+        "percent": 90
+    },
+    {
+        "title": "Laravel Framework",
+        "percent": 80
+    },
+    {
+        "title": "Coffee Making",
+        "percent": 100
+    }
+]

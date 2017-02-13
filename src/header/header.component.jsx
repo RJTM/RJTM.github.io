@@ -23,9 +23,14 @@ export default class Header extends React.Component {
                         <h2>Ricardo Montero <span className="light">(rjtm)</span></h2>
                         <ul className="nav-links">
                             <li>
-                                <Link to="about" spy={true} smooth={true} offset={-50}>About</Link></li>
-                            <li>Experience</li>
-                            <li>Skills</li>
+                                <Link to="about" spy={true} smooth={true} offset={-50}>About</Link>
+                            </li>
+                            <li>
+                                <Link to="experience" spy={true} smooth={true} offset={-50}>Experience</Link>
+                            </li>
+                            <li>
+                                <Link to="skills" spy={true} smooth={true} offset={-50}>Skills</Link>
+                            </li>
                             <li>Education</li>
                             <li>Contact</li>
                         </ul>

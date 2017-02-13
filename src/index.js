@@ -5,10 +5,14 @@ import { StickyContainer } from 'react-sticky';
 
 import Header from './header/header.component.jsx';
 import About from './about/about.component.jsx';
+import Experience from './exp/experience.component.jsx';
+import Skills from './skills/skills.component.jsx';
 
 ReactDOM.render(
     <StickyContainer>
         <Header />
         <About />
+        <Experience />
+        <Skills />
         <div className="fill"></div>
     </StickyContainer>, document.getElementById('root'));
