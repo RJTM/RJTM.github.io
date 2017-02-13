@@ -12,7 +12,6 @@ export default class Header extends React.Component {
             <div className="header">
                 <div className="contact-info">
                     <a href="mailto:rjtm1992@gmail.com">rjtm1992@gmail.com</a>
-                    <a href="tel:+584141271146">+584141271146</a>
                     <a href="#">Download PDF</a>
                 </div>
                 <Reveal effect="animated fadeInUp" className="header-container">
@@ -31,8 +30,12 @@ export default class Header extends React.Component {
                             <li>
                                 <Link to="skills" spy={true} smooth={true} offset={-50}>Skills</Link>
                             </li>
-                            <li>Education</li>
-                            <li>Contact</li>
+                            <li>
+                                <Link to="education" spy={true} smooth={true} offset={-50}>Education</Link>
+                            </li>
+                            <li>
+                                <Link to="contact" spy={true} smooth={true} offset={-50}>Contact</Link>
+                            </li>
                         </ul>
                     </div>
                 </Sticky>

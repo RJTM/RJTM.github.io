@@ -25,8 +25,8 @@ export default class SkillList extends React.Component {
 SkillList.propTypes = {
     skills: React.PropTypes.arrayOf(
         React.PropTypes.shape({
-            title: React.PropTypes.string,
-            percent: React.PropTypes.number
+            title: React.PropTypes.string.isRequired,
+            percent: React.PropTypes.number.isRequired
         })
     )
 };

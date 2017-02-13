@@ -7,6 +7,8 @@ import Header from './header/header.component.jsx';
 import About from './about/about.component.jsx';
 import Experience from './exp/experience.component.jsx';
 import Skills from './skills/skills.component.jsx';
+import Education from './education/education.component.jsx';
+import Contact from './contact/contact.component.jsx';
 
 ReactDOM.render(
     <StickyContainer>
@@ -14,5 +16,6 @@ ReactDOM.render(
         <About />
         <Experience />
         <Skills />
-        <div className="fill"></div>
+        <Education />
+        <Contact />
     </StickyContainer>, document.getElementById('root'));

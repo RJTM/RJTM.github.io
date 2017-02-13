@@ -23,9 +23,9 @@ export default class JobList extends React.Component {
 JobList.propTypes = {
     jobs: React.PropTypes.arrayOf(
         React.PropTypes.shape({
-            title: React.PropTypes.string,
-            position: React.PropTypes.string,
-            period: React.PropTypes.string
+            title: React.PropTypes.string.isRequired,
+            position: React.PropTypes.string.isRequired,
+            period: React.PropTypes.string.isRequired
         })
     )
 };

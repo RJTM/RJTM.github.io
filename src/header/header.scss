@@ -38,7 +38,7 @@
         margin: 0;
         text-transform: uppercase;
         font-family: "Oswald";
-        font-size: 5vmax;
+        font-size: 5.2vmax;
         text-shadow: 4px 4px 0px rgba(darken($primary, 50), 0.2);
         padding-left: 15px;
 
@@ -68,6 +68,15 @@
             li {
                 display: inline-block;
                 margin-right: 20px;
+
+                a{
+                    transition: all ease 1s;
+                    cursor: pointer;
+
+                    &.active {
+                        color: $primary;
+                    }
+                }
 
             }
         }
