@@ -16,6 +16,10 @@
         "percent": 95
     },
     {
+        "title": "Angular >= 2",
+        "percent": 80
+    },
+    {
         "title": "Git",
         "percent": 80
     },

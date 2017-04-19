@@ -28,6 +28,7 @@
     "autoprefixer-loader": "^3.2.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
     "node-sass": "^4.5.0",
     "rc-progress": "^2.0.6",
