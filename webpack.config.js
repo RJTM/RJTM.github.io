@@ -1,3 +1,4 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -6,19 +7,31 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     inject: 'body'
 });
 
-module.exports = {
-    devtool: 'cheap-module-source-map',
+let config = {
     entry: './src/index.js',
     output: {
-        path: './dist',
+        path: path.resolve(__dirname, process.env.NODE_ENV === 'production' ? '' : 'dist'),
         filename: 'bundle.js'
     },
     module: {
         loaders: [
             { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
             { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
-            { test: /\.scss$/, loader: "style-loader!css-loader!autoprefixer-loader!sass-loader", exclude: /node_modules/},
-            { test: /\.css$/, loader: "style-loader!css-loader"},
+            { 
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    use: ['css-loader', 'autoprefixer-loader', 'sass-loader'],
+                    fallback: 'style-loader'
+                }),
+                exclude: /node_modules/
+            },
+            { 
+                test: /\.css$/, 
+                use: ExtractTextPlugin.extract({
+                    use: ['css-loader'],
+                    fallback: 'style-loader'
+                })
+            },
             {
                 test: /.*\.(gif|png|jpe?g|svg)$/i,
                 loaders: [
@@ -38,5 +51,10 @@ module.exports = {
         
         ]
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [
+        HtmlWebpackPluginConfig,
+        new ExtractTextPlugin('styles.css')
+    ]
 }
+
+module.exports = config;
