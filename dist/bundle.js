@@ -12154,7 +12154,7 @@ var Header = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'a',
-                        { href: '#' },
+                        { href: '/resume.pdf', className: 'pdf-download', download: 'RicardoMontero.pdf' },
                         'Download PDF'
                     )
                 ),
