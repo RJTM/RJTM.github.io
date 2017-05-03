@@ -13,5 +13,10 @@
 
     .skill {
         width: 40%;
+
+        .skill-icon {
+            margin-right: 10px;
+            color: lighten($primary, 40);
+        }
     }
 }

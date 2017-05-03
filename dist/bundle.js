@@ -12628,6 +12628,7 @@ var SkillList = function (_React$Component) {
                     _react2.default.createElement(
                         'h2',
                         null,
+                        skill.icon && _react2.default.createElement('span', { className: "skill-icon rjtm-" + skill.icon }),
                         skill.title
                     ),
                     _react2.default.createElement(_rcProgress.Line, { percent: skill.percent, strokeColor: '#1b64af', strokeWidth: '2', trailWidth: '2', strokeLinecap: 'square' }),
@@ -26717,47 +26718,58 @@ module.exports = [
 module.exports = [
 	{
 		"title": "ReactJS",
-		"percent": 90
+		"percent": 90,
+		"icon": "react"
 	},
 	{
 		"title": "Redux",
-		"percent": 60
+		"percent": 60,
+		"icon": "redux"
 	},
 	{
 		"title": "ES6",
-		"percent": 75
+		"percent": 75,
+		"icon": "es6"
 	},
 	{
 		"title": "AngularJS",
-		"percent": 95
+		"percent": 95,
+		"icon": "angular"
 	},
 	{
 		"title": "Angular >= 2",
-		"percent": 80
+		"percent": 80,
+		"icon": "angular"
 	},
 	{
 		"title": "Git",
-		"percent": 80
+		"percent": 80,
+		"icon": "git"
 	},
 	{
 		"title": "NodeJS",
-		"percent": 70
+		"percent": 70,
+		"icon": "nodejs"
 	},
 	{
 		"title": "Responsive",
-		"percent": 85
+		"percent": 85,
+		"icon": "responsive"
 	},
 	{
 		"title": "Ionic Framework",
-		"percent": 90
+		"percent": 90,
+		"icon": "ionic"
 	},
 	{
 		"title": "Laravel Framework",
-		"percent": 80
+		"percent": 80,
+		"icon": "laravel"
 	},
 	{
 		"title": "Coffee Making",
-		"percent": 100
+		"percent": 100,
+		"icon": "coffee"
 	}
 ];
 
