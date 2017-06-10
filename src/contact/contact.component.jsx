@@ -5,6 +5,27 @@ import 'animate.css/animate.css';
 import { Element } from 'react-scroll';
 
 export default class Education extends React.Component {
+    constructor () {
+        super();
+
+        this.state = {
+            lastCommit: {}
+        };
+    }
+
+    componentDidMount() {
+        fetch('https://api.github.com/repos/rjtm/rjtm.github.io/commits')
+            .then(res => res.json())
+            .then(jsonData => {
+                let lastCommit = {
+                    sha: jsonData[0].sha.substr(0,7),
+                    date: jsonData[0].commit.committer.date,
+                    url: jsonData[0].html_url
+                };
+                this.setState({ lastCommit });
+            });
+    }
+
     render() {
 
         return (
@@ -30,6 +51,9 @@ export default class Education extends React.Component {
                             <i className="material-icons">file_download</i>
                         </a>
                     </Reveal>
+                </div>
+                <div className="commit-data">
+                    last updated { this.state.lastCommit.date } <a href={this.state.lastCommit.url} target="_blank">({this.state.lastCommit.sha})</a>
                 </div>
                 <div className="bottom-text">
                     Ricardo Montero 2017
